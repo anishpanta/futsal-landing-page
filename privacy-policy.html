@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript" src="js/bundle-playback.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/wombat.js" charset="utf-8"></script>
+  <script>window.RufflePlayer = window.RufflePlayer || {}; window.RufflePlayer.config = { "autoplay": "on", "unmuteOverlay": "hidden" };</script>
+  <script type="text/javascript" src="js/ruffle.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/banner-styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/iconochive.css" />
+  <!-- End Wayback Rewrite JS Include -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NFH - Nepal Futsal Hub</title>
+  <meta property="og:title" content="NFH - Nepal Futsal Hub" />
+  <meta name="twitter:title" content="NFH - Nepal Futsal Hub" />
+  <link rel="canonical" href="https://nepalfutsalhub.com" />
+  <link property="og:url" content="https://nepalfutsalhub.com" />
+  <link property="og:type" content="website" />
+  <meta name="description" content="The official website of the Nepal Futsal Hub - NFH.">
+  <meta property="og:description" content="The official website of the Nepal Futsal Hub - NFH." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta name="twitter:image" content="images/logo.png" />
+  <meta name="twitter:card" content="photo" />
+  <meta name="twitter:url" content="https://nepalfutsalhub.com" />
+  <link rel="icon" type="image/png" href="images/arenax-logo.png">
+  <script src="js/jquery.min.js"></script>
+  <!-- <script async src="https://web.archive.org/web/20190328175015js_/https://www.googletagmanager.com/gtag/js?id=UA-37341238-16"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://web.archive.org/web/20190328175015/https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37341238-16', 'auto');
+  ga('send', 'pageview');
+</script> -->
+  <style>
+    /* @import url(css/font.css); */
+
+    html {
+      background-color: #F0FFF8;
+    }
+
+    body {
+      font-size: 14px;
+      font-family: 'Rubik';
+      color: #367159;
+      text-align: center;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    * {
+      -webkit-transition: cubic-bezier(0.500, 0.000, 0.500, 1.000);
+      box-sizing: border-box;
+    }
+
+    a {
+      color: #367159;
+    }
+
+    #gradient {
+      background: -webkit-linear-gradient(-45deg, #ffffff 0%, #C9F2DF 100%);
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+      top: 0;
+      left: 0;
+    }
+
+    #floor {
+      width: 140vw;
+      height: 140vh;
+      left: -20vw;
+      top: -20vh;
+      position: fixed;
+      background-image: url(images/tiles.png);
+      background-size: 193px;
+      transform: rotate(-15deg);
+      z-index: -1;
+    }
+
+    #logo {
+      display: block;
+      position: fixed;
+      width: 332px;
+      height: auto;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 30px;
+      transition: width 0.3s, top 0.3s;
+      z-index: 100;
+    }
+
+    #logo img {
+      width: 100%;
+      position: absolute;
+      display: block;
+    }
+
+    #logo.scrolled {
+      top: 20px;
+      width: 128px;
+    }
+
+    #logo .watermark {
+      animation-name: logo_watermark;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+
+    #logo .shadow {
+      animation-name: logo_shadow;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      opacity: 0.1;
+    }
+
+    @keyframes logo_watermark {
+      0% {
+        transform: translateY(-20px);
+      }
+
+      50% {
+        transform: translateY(0px);
+      }
+
+      100% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes logo_shadow {
+      0% {
+        transform: translate(20px, 40px);
+      }
+
+      50% {
+        transform: translate(10px, 20px);
+      }
+
+      100% {
+        transform: translate(20px, 40px);
+      }
+    }
+
+    #creators {
+      margin-top: 360px;
+      font-size: 34px;
+    }
+
+    span.x {
+      font-size: 10px;
+      position: relative;
+      top: -1px;
+      color: #E499C1;
+      margin: 6px;
+    }
+
+    #buttons {
+      margin: 50px 0
+    }
+
+    .button img {
+      width: 190px;
+      margin: 10px 20px;
+      transition: all 0.2s;
+      border-radius: 6px;
+    }
+
+    .button img:hover {
+      filter: brightness(120%);
+      transform: translateY(-2px);
+      box-shadow: 3px 6px 0 rgba(94, 0, 164, 0.1);
+    }
+
+    video {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .screen {
+      border-radius: 6px;
+      border: 1px solid rgba(94, 0, 164, 0.1);
+      box-shadow: 5px 10px 0 rgba(94, 0, 164, 0.1);
+      width: 500px;
+      height: auto
+    }
+
+    .content {
+      margin: 100px 0;
+    }
+
+    h1 {
+      font-family: 'Rubik';
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 18px;
+      color: #001e03;
+      text-decoration: underline;
+    }
+
+    .title {
+      font-size: 40px;
+      font-family: 'Rubik';
+      letter-spacing: 0;
+      padding: 20px
+    }
+
+    p {
+      max-width: 670px;
+      margin: 20px auto;
+      line-height: 150%;
+      padding: 0 20px;
+    }
+
+    .content .screen {
+      margin: 20px;
+      max-width: 250px;
+    }
+
+    #merch img {
+      margin: 20px;
+      border-radius: 6px;
+      border: 1px solid rgba(94, 0, 164, 0.1);
+      box-shadow: 5px 10px 0 rgba(94, 0, 164, 0.1);
+      height: 320px;
+      transition: all 0.3s;
+    }
+
+    #merch img:hover {
+      transform: translateY(-10px);
+      box-shadow: 10px 20px 0 rgba(94, 0, 164, 0.2);
+    }
+
+    #footer {
+      margin: 60px 20px;
+      line-height: 150%;
+    }
+
+    p.small {
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 700px) {
+      #logo {
+        width: 256px;
+        top: 40px;
+      }
+
+      #creators {
+        margin-top: 300px;
+      }
+
+      .h1 {
+        font-size: 30px;
+      }
+
+      .screen {
+        width: 300px;
+        height: auto
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="gradient"></div>
+  <div id="floor"></div>
+  <a id="logo" href="/"><img class="shadow" src="images/logo-shadow.png" /><img class="watermark"
+      src="images/logo.png" /></a>
+
+  <!-- <a id="logo" href="index.html"><img class="shadow" src="https://web.archive.org/web/20190328175015im_/https://toilet.run/toilet-run-logo-shadow.png"/><img class="watermark" src="https://web.archive.org/web/20190328175015im_/https://toilet.run/toilet-run-logo.png"/></a> -->
+
+  <div class="title" id="creators">Privacy Policy</div>
+  <div class="content" id="story">
+    <h1>Futsal Management App</h1>
+
+    <p>Ditch the phone calls! Our futsal booking system makes online reservations a breeze - easier than Facebook.
+      Anyone on staff can manage bookings with our transparent system, complete with a user guide and 24/7 support.
+      Training materials are included, so you're up and running fast. Take control and boost your business with features
+      like tournament management, live booking, and growth-focused tools coming soon!</p>
+  </div>
+
+  
+
+
+  <div id="footer">
+    <!-- Feedback, press or partnerships: <a target="_blank" href="https://web.archive.org/web/20190328175015/https://twitter.com/epicbraingames">@epicbraingames</a> or <a target="_blank" href="https://web.archive.org/web/20190328175015/https://twitter.com/galgalshir">@galgalshir</a> -->
+    <p class="small">© 2024 all rights reserved | <a target="_blank" href="/terms-and-conditions.html">Terms and
+        Conditions</a> | <a target="_blank" href="/privacy-policy.html">Privacy Policy</a> | Powered By <a target="_blank"
+        href="https://miocache.com">Miocache</a>
+    </p>
+  </div>
+
+  <script>
+
+    $(window).on("scroll", function () {
+      var dft = $(document).scrollTop();
+      if (dft >= '30') {
+        $('#logo').addClass('scrolled');
+      } else {
+        $('#logo').removeClass('scrolled');
+      }
+    });
+
+    // $('#buttons').clone().insertAfter('#story');
+
+  </script>
+</body>
+
+</html>

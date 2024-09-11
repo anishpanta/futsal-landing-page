@@ -1,460 +1,448 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <script type="text/javascript" src="js/bundle-playback.js" charset="utf-8"></script>
-  <script type="text/javascript" src="js/wombat.js" charset="utf-8"></script>
-  <script>window.RufflePlayer = window.RufflePlayer || {}; window.RufflePlayer.config = { "autoplay": "on", "unmuteOverlay": "hidden" };</script>
-  <script type="text/javascript" src="js/ruffle.js"></script>
+    <meta charset="utf-8">
+    <title>Nepal Futsal Hub | Futsal Venue Hub | Tournament Planner | ArenaX</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="futsal, nepal, futsal venue, tournament planner, futsal app, sports technology, community, online booking, staff management, player development, futsal events" name="keywords">
+    <meta content="Discover the future of futsal in Nepal. Nepal Futsal Hub is your one-stop solution for all things futsal, from venue management to tournament planning and community connection." name="description">
 
-  <link rel="stylesheet" type="text/css" href="css/banner-styles.css" />
-  <link rel="stylesheet" type="text/css" href="css/iconochive.css" />
-  <!-- End Wayback Rewrite JS Include -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NFH - Nepal Futsal Hub</title>
-  <meta property="og:title" content="NFH - Nepal Futsal Hub" />
-  <meta name="twitter:title" content="NFH - Nepal Futsal Hub" />
-  <link rel="canonical" href="https://nepalfutsalhub.com" />
-  <link property="og:url" content="https://nepalfutsalhub.com" />
-  <link property="og:type" content="website" />
-  <meta name="description" content="The official website of the Nepal Futsal Hub - NFH.">
-  <meta property="og:description" content="The official website of the Nepal Futsal Hub - NFH." />
-  <meta property="og:image" content="images/logo.png" />
-  <meta name="twitter:image" content="images/logo.png" />
-  <meta name="twitter:card" content="photo" />
-  <meta name="twitter:url" content="https://nepalfutsalhub.com" />
-  <link rel="icon" type="image/png" href="images/arenax-logo.png">
-  <script src="js/jquery.min.js"></script>
-  <!-- <script async src="https://web.archive.org/web/20190328175015js_/https://www.googletagmanager.com/gtag/js?id=UA-37341238-16"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://web.archive.org/web/20190328175015/https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-37341238-16', 'auto');
-  ga('send', 'pageview');
-</script> -->
-  <style>
-    /* @import url(css/font.css); */
 
-    html {
-      background-color: #F0FFF8;
-    }
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-    body {
-      font-size: 14px;
-      font-family: 'Rubik';
-      color: #367159;
-      text-align: center;
-      font-weight: 500;
-      font-size: 16px;
-    }
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-    * {
-      -webkit-transition: cubic-bezier(0.500, 0.000, 0.500, 1.000);
-      box-sizing: border-box;
-    }
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    a {
-      color: #367159;
-    }
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    #gradient {
-      background: -webkit-linear-gradient(-45deg, #ffffff 0%, #C9F2DF 100%);
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      z-index: -2;
-      top: 0;
-      left: 0;
-    }
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    #floor {
-      width: 140vw;
-      height: 140vh;
-      left: -20vw;
-      top: -20vh;
-      position: fixed;
-      background-image: url(images/tiles.png);
-      background-size: 193px;
-      transform: rotate(-15deg);
-      z-index: -1;
-    }
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="canonical" href="https://nepalfutsalhub.com/terms-and-conditions.html" />
 
-    #logo {
-      display: block;
-      position: fixed;
-      width: 332px;
-      height: auto;
-      left: 0;
-      right: 0;
-      margin: auto;
-      top: 30px;
-      transition: width 0.3s, top 0.3s;
-      z-index: 100;
-    }
-
-    #logo img {
-      width: 100%;
-      position: absolute;
-      display: block;
-    }
-
-    #logo.scrolled {
-      top: 20px;
-      width: 128px;
-    }
-
-    #logo .watermark {
-      animation-name: logo_watermark;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-    }
-
-    #logo .shadow {
-      animation-name: logo_shadow;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-      opacity: 0.1;
-    }
-
-    @keyframes logo_watermark {
-      0% {
-        transform: translateY(-20px);
-      }
-
-      50% {
-        transform: translateY(0px);
-      }
-
-      100% {
-        transform: translateY(-20px);
-      }
-    }
-
-    @keyframes logo_shadow {
-      0% {
-        transform: translate(20px, 40px);
-      }
-
-      50% {
-        transform: translate(10px, 20px);
-      }
-
-      100% {
-        transform: translate(20px, 40px);
-      }
-    }
-
-    #creators {
-      margin-top: 360px;
-      font-size: 34px;
-    }
-
-    span.x {
-      font-size: 10px;
-      position: relative;
-      top: -1px;
-      color: #E499C1;
-      margin: 6px;
-    }
-
-    #buttons {
-      margin: 50px 0
-    }
-
-    .button img {
-      width: 190px;
-      margin: 10px 20px;
-      transition: all 0.2s;
-      border-radius: 6px;
-    }
-
-    .button img:hover {
-      filter: brightness(120%);
-      transform: translateY(-2px);
-      box-shadow: 3px 6px 0 rgba(94, 0, 164, 0.1);
-    }
-
-    video {
-      display: block;
-      margin: 0 auto;
-    }
-
-    .screen {
-      border-radius: 6px;
-      border: 1px solid rgba(94, 0, 164, 0.1);
-      box-shadow: 5px 10px 0 rgba(94, 0, 164, 0.1);
-      width: 500px;
-      height: auto
-    }
-
-    .content {
-      margin: 100px 0;
-    }
-
-    h1 {
-      font-family: 'Rubik';
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 18px;
-      color: #001e03;
-      text-decoration: underline;
-    }
-
-    .title {
-      font-size: 40px;
-      font-family: 'Rubik';
-      letter-spacing: 0;
-      padding: 20px
-    }
-
-    p {
-      max-width: 670px;
-      margin: 20px auto;
-      line-height: 150%;
-      padding: 0 20px;
-    }
-
-    .content .screen {
-      margin: 20px;
-      max-width: 250px;
-    }
-
-    #merch img {
-      margin: 20px;
-      border-radius: 6px;
-      border: 1px solid rgba(94, 0, 164, 0.1);
-      box-shadow: 5px 10px 0 rgba(94, 0, 164, 0.1);
-      height: 320px;
-      transition: all 0.3s;
-    }
-
-    #merch img:hover {
-      transform: translateY(-10px);
-      box-shadow: 10px 20px 0 rgba(94, 0, 164, 0.2);
-    }
-
-    #footer {
-      margin: 60px 20px;
-      line-height: 150%;
-    }
-
-    p.small {
-      font-size: 12px;
-    }
-
-    @media screen and (max-width: 700px) {
-      #logo {
-        width: 256px;
-        top: 40px;
-      }
-
-      #creators {
-        margin-top: 300px;
-      }
-
-      .h1 {
-        font-size: 30px;
-      }
-
-      .screen {
-        width: 300px;
-        height: auto
-      }
-    }
-  </style>
 </head>
 
-<body>
-  <div id="gradient"></div>
-  <div id="floor"></div>
-  <a id="logo" href="/"><img class="shadow" src="images/logo-shadow.png" /><img class="watermark"
-      src="images/logo.png" /></a>
-
-  <!-- <a id="logo" href="index.html"><img class="shadow" src="https://web.archive.org/web/20190328175015im_/https://toilet.run/toilet-run-logo-shadow.png"/><img class="watermark" src="https://web.archive.org/web/20190328175015im_/https://toilet.run/toilet-run-logo.png"/></a> -->
-
-  <div class="title" id="creators">Terms and Conditions</div>
-  <div class="content" id="story">
-    <p>Last Updated: April 20, 2024
-    </p>
-    <p>Welcome to Nepal Futsal Hub (NFH)!
-    </p>
-    <p>These terms and conditions outline the rules and regulations for the use of Nepal Futsal Hub’s Website, located
-      at https://nepalfutsalhub.com.
-      By accessing this website we assume you accept these terms and conditions. Do not continue to use Nepal Futsal Hub
-      if you do not agree to take all of the terms and conditions stated on this page.
-      The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all
-      Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the
-      Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party",
-      "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and
-      consideration of payment necessary to undertake the process of our assistance to the Client in the most
-      appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s
-      stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above
-      terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as
-      interchangeable and therefore as referring to same.
-    </p>
-    <h1>Cookies</h1>
-    <p>We employ the use of cookies. By accessing Nepal Futsal Hub, you agreed to use cookies in agreement with the
-      Nepal Futsal Hub's Privacy Policy.
-      Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by
-      our website to enable the functionality of certain areas to make it easier for people visiting our website. Some
-      of our affiliate/advertising partners may also use cookies.
-    </p>
-    <h1>License</h1>
-    <p>Unless otherwise stated, Nepal Futsal Hub and/or its licensors own the intellectual property rights for all
-      material
-      on Nepal Futsal Hub. All intellectual property rights are reserved. You may access this from Nepal Futsal Hub for
-      your own personal use subjected to restrictions set in these terms and conditions.</p>
-    <h1>You must not:
-    </h1>
-    <p>Republish material from Nepal Futsal Hub Sell, rent or sub-license material from Nepal Futsal Hub Reproduce,
-      duplicate or copy material from Nepal Futsal Hub Redistribute content from Nepal Futsal Hub This Agreement shall
-      begin on the date hereof. Parts of this website offer an opportunity for users to post and exchange opinions and
-      information in certain areas of the website. Nepal Futsal Hub does not filter, edit, publish or review Comments
-      prior to their presence on the website. Comments do not reflect the views and opinions of Nepal Futsal Hub, its
-      agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions.
-      To the extent permitted by applicable laws, Nepal Futsal Hub shall not be liable for the Comments or for any
-      liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or
-      appearance
-      of the Comments on this website.
-      </br>
-      Nepal Futsal Hub reserves the right to monitor all Comments and to remove any Comments which can be considered
-      inappropriate, offensive or causes breach of these Terms and Conditions.</p>
-    <h1> You warrant and represent that:
-    </h1>
-    <p>You are entitled to post the Comments on our website and have all necessary licenses and consents to do so; The
-      Comments do not invade any intellectual property right, including without limitation copyright, patent or
-      trademark
-      of any third party; The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise
-      unlawful
-      material which is an invasion of privacy The Comments will not be used to solicit or promote business or custom or
-      present commercial activities or unlawful activity. You hereby grant Nepal Futsal Hub a non-exclusive license to
-      use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms,
-      formats or media.</p>
-    <h1> Hyperlinking to our Content
-    </h1>
-    <p>The following organizations may link to our Website without prior written approval:
-      Government agencies; Search engines; News organizations; Online directory distributors may link to our Website in
-      the same manner as they hyperlink to the Websites of other listed businesses; and System wide Accredited
-      Businesses
-      except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not
-      hyperlink to our Web site. These organizations may link to our home page, to publications or to other Website
-      information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship,
-      endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of
-      the linking party’s site.</p>
-    <p>
-      We may consider and approve other link requests from the following types of organizations:
-    </p>
-    <p>
-      commonly-known consumer and/or business information sources; dot.com community sites; associations or other groups
-      representing charities; online directory distributors; internet portals; accounting, law and consulting firms; and
-      educational institutions and trade associations. We will approve link requests from these organizations if we
-      decide
-      that: (a) the link would not make us look unfavourably to ourselves or to our accredited businesses; (b) the
-      organization does not have any negative records with us; (c) the benefit to us from the visibility of the
-      hyperlink
-      compensates the absence of Nepal Futsal Hub; and (d) the link is in the context of general resource information.
-      These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not
-      falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits
-      within the context of the linking party’s site.
-    </p>
-    <p>
-      If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you
-      must inform us by sending an e-mail to Nepal Futsal Hub. Please include your name, your organization name, contact
-      information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and
-      a
-      list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.</p>
-    <h1> Approved organizations may hyperlink to our Website as follows:
-    </h1>
-    <p>By use of our corporate name; or By use of the uniform resource locator being linked to; or By use of any other
-      description of our Website being linked to that makes sense within the context and format of content on the
-      linking
-      party’s site. No use of Nepal Futsal Hub's logo or other artwork will be allowed for linking absent a trademark
-      license agreement. iFrames Without prior approval and written permission, you may not create frames around our
-      Webpages that alter in any way the visual presentation or appearance of our Website.</p>
-    <h1> Content Liability
-    </h1>
-    <p> We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend
-      us
-      against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted
-      as libellous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other
-      violation of, any third party rights.</p>
-    <h1> Reservation of Rights
-    </h1>
-    <p> We reserve the right to request that you remove all links or any particular link to our Website. You approve to
-      immediately remove all links to our Website upon request. We also reserve the right to amen these terms and
-      conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to
-      and
-      follow these linking terms and conditions.</p>
-    <h1> Removal of links from our website
-    </h1>
-    <p> If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any
-      moment(info@nepalfutsalhub.com). We will consider requests to remove links but we are not obligated to or so or to
-      respond to you directly.
-      <br>
-      We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy;
-      nor do we promise to ensure that the website remains available or that the material on the website is kept up to
-      date.
-    </p>
-    <h1>Disclaimer</h1>
-    <p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions
-      relating to our website and the use of this website. Nothing in this disclaimer will:
-      <br>
-      limit or exclude our or your liability for death or personal injury; limit or exclude our or your liability for
-      fraud or fraudulent misrepresentation; limit any of our or your liabilities in any way that is not permitted under
-      applicable law; or exclude any of our or your liabilities that may not be excluded under applicable law. The
-      limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to
-      the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities
-      arising
-      in contract, in tort and for breach of statutory duty.
-      <br>
-      As long as the website and the information and services on the website are provided free of charge, we will not be
-      liable for any loss or damage of any nature.
-    </p>
-    <h1>Close Account Policy</h1>
-<p>We value your decision to use Nepal Futsal Hub and understand that you may wish to close your account. The following terms outline the process and conditions related to closing your account through our app:</p>
-<h2>Account Closure Requests</h2>
-<p>To close your account, use the "Close Account" feature within the app. Navigate to the account settings section and follow the prompts to request account closure. Ensure that all required fields are completed and confirm your request. This process will initiate the closure of your account.</p>
-<h2>Pending Obligations</h2>
-<p>Before closing your account, ensure that all outstanding obligations, including pending payments or unresolved issues, are settled. Any unresolved matters may delay or prevent the closure of your account.</p>
-<h2>Data Retention</h2>
-<p>Upon successful closure of your account, your data will be removed from our active database. However, we may retain certain information as required by law or for legitimate business purposes. This information will be handled in accordance with our Privacy Policy.</p>
-<h2>Impact of Account Closure</h2>
-<p>Once your account is closed, you will no longer have access to the services and features provided by Nepal Futsal Hub. Any data associated with your account will be deleted, and you will need to create a new account if you wish to use our services in the future.</p>
-<h2>Reactivation</h2>
-<p>Currently, we do not offer account reactivation. If you decide to return to Nepal Futsal Hub, you will need to create a new account.</p>
-<h2>Contact Us</h2>
-<p>If you encounter any issues or have questions regarding the account closure process, please contact our support team through the app or email us at info@nepalfutsalhub.com. We are here to assist you and ensure a smooth experience.</p>
-
-  </div>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
 
 
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="https://nepalfutsalhub.com" class="navbar-brand p-0">
+                    <h1 class="m-0"><img class="main-logo" src="/img/nepal-futsal-hub-logo.png"></h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#mission" class="nav-item nav-link">Mission</a>
+                        <a href="#arenax" class="nav-item nav-link">ArenaX</a>
+                        <a href="#planner" class="nav-item nav-link">Futsal Planner Hub</a>
+                        <a href="#venue" class="nav-item nav-link">Futsal Venue Hub</a>
+                        <a href="#ecosystem" class="nav-item nav-link">Ecosystem</a>
+                    </div>
+                    <!-- <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Start Free
+                        Trial</a> -->
+                </div>
+            </nav>
+            <div class="container-xxl bg-primary hero-header">
+                <div class="container px-lg-5">
+                    <div class="row g-5">
+                        <div class="col-lg-12 text-center text-lg-start">
+                            <h1>Terms and Conditions</h1>
+                            <p class="text-dark">Last Updated: April 20, 2024
+                            </p>
+                            <p class="text-dark">Welcome to Nepal Futsal Hub (NFH)!
+                            </p>
+                            <p class="text-dark">These terms and conditions outline the rules and regulations for the
+                                use of Nepal Futsal
+                                Hub’s Website, located
+                                at https://nepalfutsalhub.com.
+                                By accessing this website we assume you accept these terms and conditions. Do not
+                                continue to use Nepal Futsal Hub
+                                if you do not agree to take all of the terms and conditions stated on this page.
+                                The following terminology applies to these Terms and Conditions, Privacy Statement and
+                                Disclaimer Notice and all
+                                Agreements: "Client", "You" and "Your" refers to you, the person log on this website and
+                                compliant to the
+                                Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers
+                                to our Company. "Party",
+                                "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the
+                                offer, acceptance and
+                                consideration of payment necessary to undertake the process of our assistance to the
+                                Client in the most
+                                appropriate manner for the express purpose of meeting the Client’s needs in respect of
+                                provision of the Company’s
+                                stated services, in accordance with and subject to, prevailing law of Netherlands. Any
+                                use of the above
+                                terminology or other words in the singular, plural, capitalization and/or he/she or
+                                they, are taken as
+                                interchangeable and therefore as referring to same.
+                            </p>
+                            <h2>Cookies</h2>
+                            <p class="text-dark">We employ the use of cookies. By accessing Nepal Futsal Hub, you agreed
+                                to use cookies in
+                                agreement with the
+                                Nepal Futsal Hub's Privacy Policy.
+                                Most interactive websites use cookies to let us retrieve the user’s details for each
+                                visit. Cookies are used by
+                                our website to enable the functionality of certain areas to make it easier for people
+                                visiting our website. Some
+                                of our affiliate/advertising partners may also use cookies.
+                            </p>
+                            <h2>License</h2>
+                            <p class="text-dark">Unless otherwise stated, Nepal Futsal Hub and/or its licensors own the
+                                intellectual
+                                property rights for all
+                                material
+                                on Nepal Futsal Hub. All intellectual property rights are reserved. You may access this
+                                from Nepal Futsal Hub for
+                                your own personal use subjected to restrictions set in these terms and conditions.</p>
+                            <h2>You must not:
+                            </h2>
+                            <p class="text-dark">Republish material from Nepal Futsal Hub Sell, rent or sub-license
+                                material from Nepal
+                                Futsal Hub Reproduce,
+                                duplicate or copy material from Nepal Futsal Hub Redistribute content from Nepal Futsal
+                                Hub This Agreement shall
+                                begin on the date hereof. Parts of this website offer an opportunity for users to post
+                                and exchange opinions and
+                                information in certain areas of the website. Nepal Futsal Hub does not filter, edit,
+                                publish or review Comments
+                                prior to their presence on the website. Comments do not reflect the views and opinions
+                                of Nepal Futsal Hub, its
+                                agents and/or affiliates. Comments reflect the views and opinions of the person who post
+                                their views and opinions.
+                                To the extent permitted by applicable laws, Nepal Futsal Hub shall not be liable for the
+                                Comments or for any
+                                liability, damages or expenses caused and/or suffered as a result of any use of and/or
+                                posting of and/or
+                                appearance
+                                of the Comments on this website.
+                                </br>
+                                Nepal Futsal Hub reserves the right to monitor all Comments and to remove any Comments
+                                which can be considered
+                                inappropriate, offensive or causes breach of these Terms and Conditions.</p>
+                            <h2> You warrant and represent that:
+                            </h2>
+                            <p class="text-dark">You are entitled to post the Comments on our website and have all
+                                necessary licenses and
+                                consents to do so; The
+                                Comments do not invade any intellectual property right, including without limitation
+                                copyright, patent or
+                                trademark
+                                of any third party; The Comments do not contain any defamatory, libelous, offensive,
+                                indecent or otherwise
+                                unlawful
+                                material which is an invasion of privacy The Comments will not be used to solicit or
+                                promote business or custom or
+                                present commercial activities or unlawful activity. You hereby grant Nepal Futsal Hub a
+                                non-exclusive license to
+                                use, reproduce, edit and authorize others to use, reproduce and edit any of your
+                                Comments in any and all forms,
+                                formats or media.</p>
+                            <h2> Hyperlinking to our Content
+                            </h2>
+                            <p class="text-dark">The following organizations may link to our Website without prior
+                                written approval:
+                                Government agencies; Search engines; News organizations; Online directory distributors
+                                may link to our Website in
+                                the same manner as they hyperlink to the Websites of other listed businesses; and System
+                                wide Accredited
+                                Businesses
+                                except soliciting non-profit organizations, charity shopping malls, and charity
+                                fundraising groups which may not
+                                hyperlink to our Web site. These organizations may link to our home page, to
+                                publications or to other Website
+                                information so long as the link: (a) is not in any way deceptive; (b) does not falsely
+                                imply sponsorship,
+                                endorsement or approval of the linking party and its products and/or services; and (c)
+                                fits within the context of
+                                the linking party’s site.</p>
+                            <p class="text-dark">
+                                We may consider and approve other link requests from the following types of
+                                organizations:
+                            </p>
+                            <p class="text-dark">
+                                commonly-known consumer and/or business information sources; dot.com community sites;
+                                associations or other groups
+                                representing charities; online directory distributors; internet portals; accounting, law
+                                and consulting firms; and
+                                educational institutions and trade associations. We will approve link requests from
+                                these organizations if we
+                                decide
+                                that: (a) the link would not make us look unfavourably to ourselves or to our accredited
+                                businesses; (b) the
+                                organization does not have any negative records with us; (c) the benefit to us from the
+                                visibility of the
+                                hyperlink
+                                compensates the absence of Nepal Futsal Hub; and (d) the link is in the context of
+                                general resource information.
+                                These organizations may link to our home page so long as the link: (a) is not in any way
+                                deceptive; (b) does not
+                                falsely imply sponsorship, endorsement or approval of the linking party and its products
+                                or services; and (c) fits
+                                within the context of the linking party’s site.
+                            </p>
+                            <p class="text-dark">
+                                If you are one of the organizations listed in paragraph 2 above and are interested in
+                                linking to our website, you
+                                must inform us by sending an e-mail to Nepal Futsal Hub. Please include your name, your
+                                organization name, contact
+                                information as well as the URL of your site, a list of any URLs from which you intend to
+                                link to our Website, and
+                                a
+                                list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a
+                                response.</p>
+                            <h2> Approved organizations may hyperlink to our Website as follows:
+                            </h2>
+                            <p class="text-dark">By use of our corporate name; or By use of the uniform resource locator
+                                being linked to;
+                                or By use of any other
+                                description of our Website being linked to that makes sense within the context and
+                                format of content on the
+                                linking
+                                party’s site. No use of Nepal Futsal Hub's logo or other artwork will be allowed for
+                                linking absent a trademark
+                                license agreement. iFrames Without prior approval and written permission, you may not
+                                create frames around our
+                                Webpages that alter in any way the visual presentation or appearance of our Website.</p>
+                            <h2> Content Liability
+                            </h2>
+                            <p class="text-dark"> We shall not be hold responsible for any content that appears on your
+                                Website. You agree
+                                to protect and defend
+                                us
+                                against all claims that is rising on your Website. No link(s) should appear on any
+                                Website that may be interpreted
+                                as libellous, obscene or criminal, or which infringes, otherwise violates, or advocates
+                                the infringement or other
+                                violation of, any third party rights.</p>
+                            <h2> Reservation of Rights
+                            </h2>
+                            <p class="text-dark"> We reserve the right to request that you remove all links or any
+                                particular link to our
+                                Website. You approve to
+                                immediately remove all links to our Website upon request. We also reserve the right to
+                                amen these terms and
+                                conditions and it’s linking policy at any time. By continuously linking to our Website,
+                                you agree to be bound to
+                                and
+                                follow these linking terms and conditions.</p>
+                            <h2> Removal of links from our website
+                            </h2>
+                            <p class="text-dark"> If you find any link on our Website that is offensive for any reason,
+                                you are free to
+                                contact and inform us any
+                                moment(info@nepalfutsalhub.com). We will consider requests to remove links but we are
+                                not obligated to or so or to
+                                respond to you directly.
+                                <br>
+                                We do not ensure that the information on this website is correct, we do not warrant its
+                                completeness or accuracy;
+                                nor do we promise to ensure that the website remains available or that the material on
+                                the website is kept up to
+                                date.
+                            </p>
+                            <h2>Disclaimer</h2>
+                            <p class="text-dark">To the maximum extent permitted by applicable law, we exclude all
+                                representations,
+                                warranties and conditions
+                                relating to our website and the use of this website. Nothing in this disclaimer will:
+                                <br>
+                                limit or exclude our or your liability for death or personal injury; limit or exclude
+                                our or your liability for
+                                fraud or fraudulent misrepresentation; limit any of our or your liabilities in any way
+                                that is not permitted under
+                                applicable law; or exclude any of our or your liabilities that may not be excluded under
+                                applicable law. The
+                                limitations and prohibitions of liability set in this Section and elsewhere in this
+                                disclaimer: (a) are subject to
+                                the preceding paragraph; and (b) govern all liabilities arising under the disclaimer,
+                                including liabilities
+                                arising
+                                in contract, in tort and for breach of statutory duty.
+                                <br>
+                                As long as the website and the information and services on the website are provided free
+                                of charge, we will not be
+                                liable for any loss or damage of any nature.
+                            </p>
+                            <h2>Close Account Policy</h2>
+                            <p class="text-dark">We value your decision to use Nepal Futsal Hub and understand that you
+                                may wish to close
+                                your account. The following terms outline the process and conditions related to closing
+                                your account through our app:</p>
+                            <h2>Account Closure Requests</h2>
+                            <p class="text-dark">To close your account, use the "Close Account" feature within the app.
+                                Navigate to the
+                                account settings section and follow the prompts to request account closure. Ensure that
+                                all required fields are completed and confirm your request. This process will initiate
+                                the closure of your account.</p>
+                            <h2>Pending Obligations</h2>
+                            <p class="text-dark">Before closing your account, ensure that all outstanding obligations,
+                                including pending
+                                payments or unresolved issues, are settled. Any unresolved matters may delay or prevent
+                                the closure of your account.</p>
+                            <h2>Data Retention</h2>
+                            <p class="text-dark">Upon successful closure of your account, your data will be removed from
+                                our active
+                                database. However, we may retain certain information as required by law or for
+                                legitimate business purposes. This information will be handled in accordance with our
+                                Privacy Policy.</p>
+                            <h2>Impact of Account Closure</h2>
+                            <p class="text-dark">Once your account is closed, you will no longer have access to the
+                                services and features
+                                provided by Nepal Futsal Hub. Any data associated with your account will be deleted, and
+                                you will need to create a new account if you wish to use our services in the future.</p>
+                            <h2>Reactivation</h2>
+                            <p class="text-dark">Currently, we do not offer account reactivation. If you decide to
+                                return to Nepal Futsal
+                                Hub, you will need to create a new account.</p>
+                            <h2>Contact Us</h2>
+                            <p class="text-dark">If you encounter any issues or have questions regarding the account
+                                closure process,
+                                please contact our support team through the app or email us at info@nepalfutsalhub.com.
+                                We are here to assist you and ensure a smooth experience.</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
 
 
-  <div id="footer">
-    <!-- Feedback, press or partnerships: <a target="_blank" href="https://web.archive.org/web/20190328175015/https://twitter.com/epicbraingames">@epicbraingames</a> or <a target="_blank" href="https://web.archive.org/web/20190328175015/https://twitter.com/galgalshir">@galgalshir</a> -->
-    <p class="small">© 2024 all rights reserved | <a target="_blank" href="/terms-and-conditions.html">Terms and
-        Conditions</a> | <a target="_blank" href="/privacy-policy.html">Privacy Policy</a> | Powered By <a
-        target="_blank" href="https://miocache.com">Miocache</a>
-    </p>
-  </div>
 
-  <script>
 
-    $(window).on("scroll", function () {
-      var dft = $(document).scrollTop();
-      if (dft >= '30') {
-        $('#logo').addClass('scrolled');
-      } else {
-        $('#logo').removeClass('scrolled');
-      }
-    });
 
-    // $('#buttons').clone().insertAfter('#story');
 
-  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="text-white mb-4">Address</h4>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Red Cross Chowk</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>Balkot-2, Bhaktapur, Nepal</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+(977) 9744258517</p>
+                        <p><i class="fa fa-envelope me-3"></i>nepalfutsalhub@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="text-white mb-4">Quick Link</h4>
+                        <a class="btn btn-link" href="#arenax">ArenaX</a>
+                        <a class="btn btn-link" href="#planner">Futsal Planner Hub</a>
+                        <a class="btn btn-link" href="#venue">Futsal Venue Hub</a>
+                        <a class="btn btn-link" href="privacy-policy.html">Privacy Policy</a>
+                        <a class="btn btn-link" href="terms-and-conditions.html">Terms & Condition</a>
+                        <!-- <a class="btn btn-link" href="">Career</a> -->
+                    </div>
+                    <!-- <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Popular Link</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div> -->
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="text-white mb-4">Newsletter</h4>
+                        <p>Enter your email to receive the latest updates and more information.</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-paper-plane text-primary-gradient fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="https://nepalfutsalhub.com">Nepal Futsal Hub</a>, All
+                            Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://miocache.com">Miocache</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="https://nepalfutsalhub.com">Home</a>
+                                <a href="#">Cookies</a>
+                                <a href="#">Help</a>
+                                <a href="#">FAQs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,401 +1,335 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <script type="text/javascript" src="js/bundle-playback.js" charset="utf-8"></script>
-  <script type="text/javascript" src="js/wombat.js" charset="utf-8"></script>
-  <script>window.RufflePlayer = window.RufflePlayer || {}; window.RufflePlayer.config = { "autoplay": "on", "unmuteOverlay": "hidden" };</script>
-  <script type="text/javascript" src="js/ruffle.js"></script>
+    <meta charset="utf-8">
+    <title>Nepal Futsal Hub | Futsal Venue Hub | Tournament Planner | ArenaX</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="futsal, nepal, futsal venue, tournament planner, futsal app, sports technology, community, online booking, staff management, player development, futsal events" name="keywords">
+    <meta content="Discover the future of futsal in Nepal. Nepal Futsal Hub is your one-stop solution for all things futsal, from venue management to tournament planning and community connection." name="description">
 
-  <link rel="stylesheet" type="text/css" href="css/banner-styles.css" />
-  <link rel="stylesheet" type="text/css" href="css/iconochive.css" />
-  <!-- End Wayback Rewrite JS Include -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NFH - Nepal Futsal Hub</title>
-  <meta property="og:title" content="NFH - Nepal Futsal Hub" />
-  <meta name="twitter:title" content="NFH - Nepal Futsal Hub" />
-  <link rel="canonical" href="https://nepalfutsalhub.com" />
-  <link property="og:url" content="https://nepalfutsalhub.com" />
-  <link property="og:type" content="website" />
-  <meta name="description" content="The official website of the Nepal Futsal Hub - NFH.">
-  <meta property="og:description" content="The official website of the Nepal Futsal Hub - NFH." />
-  <meta property="og:image" content="images/logo.png" />
-  <meta name="twitter:image" content="images/logo.png" />
-  <meta name="twitter:card" content="photo" />
-  <meta name="twitter:url" content="https://nepalfutsalhub.com" />
-  <link rel="icon" type="image/png" href="images/arenax-logo.png">
-  <script src="js/jquery.min.js"></script>
-  <!-- <script async src="https://web.archive.org/web/20190328175015js_/https://www.googletagmanager.com/gtag/js?id=UA-37341238-16"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://web.archive.org/web/20190328175015/https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-37341238-16', 'auto');
-  ga('send', 'pageview');
-</script> -->
-  <style>
-    /* @import url(css/font.css); */
 
-    html {
-      background-color: #F0FFF8;
-    }
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-    body {
-      font-size: 14px;
-      font-family: 'Rubik';
-      color: #367159;
-      text-align: center;
-      font-weight: 500;
-      font-size: 16px;
-    }
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-    * {
-      -webkit-transition: cubic-bezier(0.500, 0.000, 0.500, 1.000);
-      box-sizing: border-box;
-    }
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    a {
-      color: #367159;
-    }
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    #gradient {
-      background: -webkit-linear-gradient(-45deg, #ffffff 0%, #C9F2DF 100%);
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      z-index: -2;
-      top: 0;
-      left: 0;
-    }
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    #floor {
-      width: 140vw;
-      height: 140vh;
-      left: -20vw;
-      top: -20vh;
-      position: fixed;
-      background-image: url(images/tiles.png);
-      background-size: 193px;
-      transform: rotate(-15deg);
-      z-index: -1;
-    }
-
-    #logo {
-      display: block;
-      position: fixed;
-      width: 332px;
-      height: auto;
-      left: 0;
-      right: 0;
-      margin: auto;
-      top: 30px;
-      transition: width 0.3s, top 0.3s;
-      z-index: 100;
-    }
-
-    #logo img {
-      width: 100%;
-      position: absolute;
-      display: block;
-    }
-
-    #logo.scrolled {
-      top: 20px;
-      width: 128px;
-    }
-
-    #logo .watermark {
-      animation-name: logo_watermark;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-    }
-
-    #logo .shadow {
-      animation-name: logo_shadow;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-      opacity: 0.1;
-    }
-
-    @keyframes logo_watermark {
-      0% {
-        transform: translateY(-20px);
-      }
-
-      50% {
-        transform: translateY(0px);
-      }
-
-      100% {
-        transform: translateY(-20px);
-      }
-    }
-
-    @keyframes logo_shadow {
-      0% {
-        transform: translate(20px, 40px);
-      }
-
-      50% {
-        transform: translate(10px, 20px);
-      }
-
-      100% {
-        transform: translate(20px, 40px);
-      }
-    }
-
-    #creators {
-      margin-top: 360px;
-      font-size: 34px;
-    }
-
-    span.x {
-      font-size: 10px;
-      position: relative;
-      top: -1px;
-      color: #E499C1;
-      margin: 6px;
-    }
-
-    #buttons {
-      margin: 50px 0
-    }
-
-    .button img {
-      width: 190px;
-      margin: 10px 20px;
-      transition: all 0.2s;
-      border-radius: 6px;
-    }
-
-    .button img:hover {
-      filter: brightness(120%);
-      transform: translateY(-2px);
-      box-shadow: 3px 6px 0 rgba(94, 0, 164, 0.1);
-    }
-
-    video {
-      display: block;
-      margin: 0 auto;
-    }
-
-    .screen {
-      border-radius: 6px;
-      border: 1px solid rgba(94, 0, 164, 0.1);
-      box-shadow: 5px 10px 0 rgba(94, 0, 164, 0.1);
-      width: 500px;
-      height: auto
-    }
-
-    .content {
-      margin: 100px 0;
-    }
-
-    h1 {
-      font-family: 'Rubik';
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 18px;
-      color: #001e03;
-      text-decoration: underline;
-    }
-
-    .title {
-      font-size: 40px;
-      font-family: 'Rubik';
-      letter-spacing: 0;
-      padding: 20px
-    }
-
-    p {
-      max-width: 670px;
-      margin: 20px auto;
-      line-height: 150%;
-      padding: 0 20px;
-    }
-
-    .content .screen {
-      margin: 20px;
-      max-width: 250px;
-    }
-
-    #merch img {
-      margin: 20px;
-      border-radius: 6px;
-      border: 1px solid rgba(94, 0, 164, 0.1);
-      box-shadow: 5px 10px 0 rgba(94, 0, 164, 0.1);
-      height: 320px;
-      transition: all 0.3s;
-    }
-
-    #merch img:hover {
-      transform: translateY(-10px);
-      box-shadow: 10px 20px 0 rgba(94, 0, 164, 0.2);
-    }
-
-    #footer {
-      margin: 60px 20px;
-      line-height: 150%;
-    }
-
-    p.small {
-      font-size: 12px;
-    }
-
-    @media screen and (max-width: 700px) {
-      #logo {
-        width: 256px;
-        top: 40px;
-      }
-
-      #creators {
-        margin-top: 300px;
-      }
-
-      .h1 {
-        font-size: 30px;
-      }
-
-      .screen {
-        width: 300px;
-        height: auto
-      }
-    }
-  </style>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="canonical" href="https://nepalfutsalhub.com/privacy-policy.html" />
 </head>
 
-<body>
-  <div id="gradient"></div>
-  <div id="floor"></div>
-  <a id="logo" href="/"><img class="shadow" src="images/logo-shadow.png" /><img class="watermark"
-      src="images/logo.png" /></a>
-
-  <!-- <a id="logo" href="index.html"><img class="shadow" src="https://web.archive.org/web/20190328175015im_/https://toilet.run/toilet-run-logo-shadow.png"/><img class="watermark" src="https://web.archive.org/web/20190328175015im_/https://toilet.run/toilet-run-logo.png"/></a> -->
-
-  <div class="title" id="creators">Privacy Policy</div>
-  <div class="content" id="story">
-    <p>
-      At Nepal Futsal Hub, accessible from https://nepalfutsalhub.com, one of our main priorities is the privacy of our
-      visitors. This Privacy Policy document contains types of information that is collected and recorded by Nepal
-      Futsal Hub and how we use it.
-      If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact
-      us through email at info@nepalfutsalhub.com
-    </p>
-    <h1>General Data Protection Regulation (GDPR)
-    </h1>
-    <p>We are a Data Controller of your information.</p>
-    <p>
-      Nepal Futsal Hub legal basis for collecting and using the personal information described in this Privacy Policy
-      depends on the Personal Information we collect and the specific context in which we collect the information:
-      Nepal Futsal Hub needs to perform a contract with you. You have given Nepal Futsal Hub permission to do so.
-      Processing your personal information is in Nepal Futsal Hub legitimate interests. Nepal Futsal Hub needs to comply
-      with the law. Nepal Futsal Hub will retain your personal information only for as long as is necessary for the
-      purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply
-      with our legal obligations, resolve disputes, and enforce our policies.
-    </p>
-    <p>
-      If you are a resident of the European Economic Area (EEA), you have certain data protection rights. If you wish to
-      be informed what Personal Information we hold about you and if you want it to be removed from our systems, please
-      contact us.
-    </p>
-    <p>
-      In certain circumstances, you have the following data protection rights:
-    </p>
-    <p>
-      The right to access, update or to delete the information we have on you. The right of rectification. The right to
-      object. The right of restriction. The right to data portability The right to withdraw consent
-    </p>
-    <h1>Log Files
-    </h1>
-    <p>Nepal Futsal Hub follows a standard procedure of using log files. These files log visitors when they visit
-      websites.
-      <br>
-      All hosting companies do this and a part of hosting services' analytics. The information collected by log files
-      include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp,
-      referring/exit pages, and possibly the number of clicks. These are not linked to any information that is
-      personally
-      identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users'
-      movement on the website, and gathering demographic information.
-    </p>
-    <h1>Google DoubleClick DART Cookie
-    </h1>
-    <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to
-      our
-      site visitors and other sites on the internet. However, visitors may choose to decline the use of DART cookies by
-      visiting the Google ad and content network Privacy Policy at the following URL –
-      https://policies.google.com/technologies/ads</p>
-    <h1>Privacy Policies
-    </h1>
-    <p>You may consult this list to find the Privacy Policy for each of the advertising partners of Nepal Futsal Hub.
-      Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in
-      their respective advertisements and links that appear on Nepal Futsal Hub, which are sent directly to users'
-      browser. They automatically receive your IP address when this occurs. These technologies are used to measure the
-      effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on
-      websites
-      that you visit.
-      <br>
-      Note that Nepal Futsal Hub has no access to or control over these cookies that are used by third-party
-      advertisers.
-    </p>
-    <h1> Third Party Privacy Policies
-    </h1>
-    <p>Nepal Futsal Hub's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to
-      consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may
-      include their practices and instructions about how to opt-out of certain options. You may find a complete list of
-      these Privacy Policies and their links here: Privacy Policy Links.
-      You can choose to disable cookies through your individual browser options. To know more detailed information about
-      cookie management with specific web browsers, it can be found at the browsers' respective websites. What Are
-      Cookies?</p>
-    <h1> Children's Information
-    </h1>
-    <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and
-      guardians to observe, participate in, and/or monitor and guide their online activity.
-      Nepal Futsal Hub does not knowingly collect any Personal Identifiable Information from children under the age of
-      13.
-      If you think that your child provided this kind of information on our website, we strongly encourage you to
-      contact
-      us immediately and we will do our best efforts to promptly remove such information from our records.
-    </p>
-    <h1> Online Privacy Policy Only
-    </h1>
-    <p>Our Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to
-      the information that they shared and/or collect in Nepal Futsal Hub. This policy is not applicable to any
-      information collected offline or via channels other than this website.
-    </p>
-    <h1>Consent</h1>
-    <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.
-    </p>
-
-  </div>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
 
 
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="https://nepalfutsalhub.com" class="navbar-brand p-0">
+                    <h1 class="m-0"><img class="main-logo" src="/img/nepal-futsal-hub-logo.png"></h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#mission" class="nav-item nav-link">Mission</a>
+                        <a href="#arenax" class="nav-item nav-link">ArenaX</a>
+                        <a href="#planner" class="nav-item nav-link">Futsal Planner Hub</a>
+                        <a href="#venue" class="nav-item nav-link">Futsal Venue Hub</a>
+                        <a href="#ecosystem" class="nav-item nav-link">Ecosystem</a>
+                    </div>
+                    <!-- <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Start Free
+                        Trial</a> -->
+                </div>
+            </nav>
+            <div class="container-xxl bg-primary hero-header">
+                <div class="container px-lg-5">
+                    <div class="row g-5">
+                        <div class="col-lg-12 text-center text-lg-start">
+                            <h1>Privacy Policy</h1>
+                            <p class="text-dark">
+                                At Nepal Futsal Hub, accessible from https://nepalfutsalhub.com, one of our main
+                                priorities is the privacy
+                                of our
+                                visitors. This Privacy Policy document contains types of information that is collected
+                                and recorded by Nepal
+                                Futsal Hub and how we use it.
+                                If you have additional questions or require more information about our Privacy Policy,
+                                do not hesitate to
+                                contact
+                                us through email at info@nepalfutsalhub.com
+                            </p>
+                            <h2>General Data Protection Regulation (GDPR)
+                            </h2>
+                            <p class="text-dark">We are a Data Controller of your information.</p>
+                            <p class="text-dark">
+                                Nepal Futsal Hub legal basis for collecting and using the personal information described
+                                in this Privacy
+                                Policy
+                                depends on the Personal Information we collect and the specific context in which we
+                                collect the information:
+                                Nepal Futsal Hub needs to perform a contract with you. You have given Nepal Futsal Hub
+                                permission to do so.
+                                Processing your personal information is in Nepal Futsal Hub legitimate interests. Nepal
+                                Futsal Hub needs to
+                                comply
+                                with the law. Nepal Futsal Hub will retain your personal information only for as long as
+                                is necessary for
+                                the
+                                purposes set out in this Privacy Policy. We will retain and use your information to the
+                                extent necessary to
+                                comply
+                                with our legal obligations, resolve disputes, and enforce our policies.
+                            </p>
+                            <p class="text-dark">
+                                If you are a resident of the European Economic Area (EEA), you have certain data
+                                protection rights. If you
+                                wish to
+                                be informed what Personal Information we hold about you and if you want it to be removed
+                                from our systems,
+                                please
+                                contact us.
+                            </p>
+                            <p class="text-dark">
+                                In certain circumstances, you have the following data protection rights:
+                            </p>
+                            <p class="text-dark">
+                                The right to access, update or to delete the information we have on you. The right of
+                                rectification. The
+                                right to
+                                object. The right of restriction. The right to data portability The right to withdraw
+                                consent
+                            </p>
+                            <h2>Log Files
+                            </h2>
+                            <p class="text-dark">Nepal Futsal Hub follows a standard procedure of using log files. These
+                                files log
+                                visitors when they visit
+                                websites.
+                                <br>
+                                All hosting companies do this and a part of hosting services' analytics. The information
+                                collected by log
+                                files
+                                include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP),
+                                date and time
+                                stamp,
+                                referring/exit pages, and possibly the number of clicks. These are not linked to any
+                                information that is
+                                personally
+                                identifiable. The purpose of the information is for analyzing trends, administering the
+                                site, tracking
+                                users'
+                                movement on the website, and gathering demographic information.
+                            </p>
+                            <h2>Google DoubleClick DART Cookie
+                            </h2>
+                            <p class="text-dark">Google is one of a third-party vendor on our site. It also uses
+                                cookies, known as DART
+                                cookies, to serve ads
+                                to
+                                our
+                                site visitors and other sites on the internet. However, visitors may choose to decline
+                                the use of DART
+                                cookies by
+                                visiting the Google ad and content network Privacy Policy at the following URL –
+                                https://policies.google.com/technologies/ads</p>
+                            <h2>Privacy Policies
+                            </h2>
+                            <p class="text-dark">You may consult this list to find the Privacy Policy for each of the
+                                advertising partners
+                                of Nepal Futsal
+                                Hub.
+                                Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web
+                                Beacons that are
+                                used in
+                                their respective advertisements and links that appear on Nepal Futsal Hub, which are
+                                sent directly to users'
+                                browser. They automatically receive your IP address when this occurs. These technologies
+                                are used to measure
+                                the
+                                effectiveness of their advertising campaigns and/or to personalize the advertising
+                                content that you see on
+                                websites
+                                that you visit.
+                                <br>
+                                Note that Nepal Futsal Hub has no access to or control over these cookies that are used
+                                by third-party
+                                advertisers.
+                            </p>
+                            <h2> Third Party Privacy Policies
+                            </h2>
+                            <p class="text-dark">Nepal Futsal Hub's Privacy Policy does not apply to other advertisers
+                                or websites. Thus,
+                                we are advising you
+                                to
+                                consult the respective Privacy Policies of these third-party ad servers for more
+                                detailed information. It
+                                may
+                                include their practices and instructions about how to opt-out of certain options. You
+                                may find a complete
+                                list of
+                                these Privacy Policies and their links here: Privacy Policy Links.
+                                You can choose to disable cookies through your individual browser options. To know more
+                                detailed information
+                                about
+                                cookie management with specific web browsers, it can be found at the browsers'
+                                respective websites. What Are
+                                Cookies?</p>
+                            <h2> Children's Information
+                            </h2>
+                            <p class="text-dark">Another part of our priority is adding protection for children while
+                                using the internet.
+                                We encourage parents
+                                and
+                                guardians to observe, participate in, and/or monitor and guide their online activity.
+                                Nepal Futsal Hub does not knowingly collect any Personal Identifiable Information from
+                                children under the
+                                age of
+                                13.
+                                If you think that your child provided this kind of information on our website, we
+                                strongly encourage you to
+                                contact
+                                us immediately and we will do our best efforts to promptly remove such information from
+                                our records.
+                            </p>
+                            <h2> Online Privacy Policy Only
+                            </h2>
+                            <p class="text-dark">Our Privacy Policy applies only to our online activities and is valid
+                                for visitors to our
+                                website with
+                                regards to
+                                the information that they shared and/or collect in Nepal Futsal Hub. This policy is not
+                                applicable to any
+                                information collected offline or via channels other than this website.
+                            </p>
+                            <h2>Consent</h2>
+                            <p class="text-dark">By using our website, you hereby consent to our Privacy Policy and
+                                agree to its terms.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="text-white mb-4">Address</h4>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Red Cross Chowk</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>Balkot-2, Bhaktapur, Nepal</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+(977) 9744258517</p>
+                        <p><i class="fa fa-envelope me-3"></i>nepalfutsalhub@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="text-white mb-4">Quick Link</h4>
+                        <a class="btn btn-link" href="#arenax">ArenaX</a>
+                        <a class="btn btn-link" href="#planner">Futsal Planner Hub</a>
+                        <a class="btn btn-link" href="#venue">Futsal Venue Hub</a>
+                        <a class="btn btn-link" href="privacy-policy.html">Privacy Policy</a>
+                        <a class="btn btn-link" href="terms-and-conditions.html">Terms & Condition</a>
+                        <!-- <a class="btn btn-link" href="">Career</a> -->
+                    </div>
+                    <!-- <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Popular Link</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div> -->
+                    <div class="col-md-6 col-lg-4">
+                        <h4 class="text-white mb-4">Newsletter</h4>
+                        <p>Enter your email to receive the latest updates and more information.</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-paper-plane text-primary-gradient fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="https://nepalfutsalhub.com">Nepal Futsal Hub</a>, All
+                            Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://miocache.com">Miocache</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="https://nepalfutsalhub.com">Home</a>
+                                <a href="#">Cookies</a>
+                                <a href="#">Help</a>
+                                <a href="#">FAQs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
 
 
-  <div id="footer">
-    <!-- Feedback, press or partnerships: <a target="_blank" href="https://web.archive.org/web/20190328175015/https://twitter.com/epicbraingames">@epicbraingames</a> or <a target="_blank" href="https://web.archive.org/web/20190328175015/https://twitter.com/galgalshir">@galgalshir</a> -->
-    <p class="small">© 2024 all rights reserved | <a target="_blank" href="/terms-and-conditions.html">Terms and
-        Conditions</a> | <a target="_blank" href="/privacy-policy.html">Privacy Policy</a> | Powered By <a
-        target="_blank" href="https://miocache.com">Miocache</a>
-    </p>
-  </div>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+    </div>
 
-  <script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    $(window).on("scroll", function () {
-      var dft = $(document).scrollTop();
-      if (dft >= '30') {
-        $('#logo').addClass('scrolled');
-      } else {
-        $('#logo').removeClass('scrolled');
-      }
-    });
-
-    // $('#buttons').clone().insertAfter('#story');
-
-  </script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
